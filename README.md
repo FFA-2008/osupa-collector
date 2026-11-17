@@ -4,7 +4,7 @@ A small Windows script that packs your **osu!standard replays** and the **.osu m
 
 ## Download
 
-Download **[Osupa Collector v1.4.zip](Osupa%20Collector%20v1.4.zip)** (click it, then the download button), unzip it, and double-click `osupa_collect.bat`. Full steps are in [READ ME.txt](READ%20ME.txt).
+Download **[Osupa Collector v1.5.zip](Osupa%20Collector%20v1.5.zip)** (click it, then the download button), unzip it, and double-click `osupa_collect.bat`. Full steps are in [READ ME.txt](READ%20ME.txt).
 
 ## What it does
 

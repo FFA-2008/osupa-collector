@@ -1,4 +1,4 @@
-# osu!PA replay collector v1.4
+# osu!PA replay collector v1.5
 #
 # What this does, step by step (all of it is below, nothing is hidden):
 #   1. Asks whether you play lazer, stable or both, and finds those osu! folders.
@@ -30,7 +30,7 @@
 param([string]$StablePath = "")
 
 $ErrorActionPreference = "Stop"
-$Version = "1.4"
+$Version = "1.5"
 # The upload page (Google Form). PLAYERNAME in it is replaced by your osu! name. Empty = no page.
 $UploadForm = 'https://docs.google.com/forms/d/e/1FAIpQLSdU7paxKc_2gHt0Nfzv9ODscI2shLW522_G8yPj8fWj23Pv1Q/viewform?usp=pp_url&entry.967959517=PLAYERNAME'
 $PartLimit = 2GB          # max bytes of files per zip part
@@ -714,6 +714,18 @@ Write-Host ("  " + $script:outDir)
 Write-Host ""
 Write-Host ("UPLOAD ALL " + $nParts + " OF THESE FILES (unchanged, don't unzip or rename them):")
 foreach ($p in $final) { Write-Host ("  " + (Split-Path -Leaf $p) + "   (" + [math]::Round((New-Object System.IO.FileInfo $p).Length / 1MB) + " MB)") }
+if ($UploadForm) {
+    # a small note next to the zips, in case the browser doesn't open the upload page
+    $noteUrl = $UploadForm.Replace("PLAYERNAME", [System.Uri]::EscapeDataString($top))
+    $note = "CHECK YOUR BROWSER`r`n`r`n" +
+        "The upload page should have opened in your browser, with your osu! name already filled in.`r`n" +
+        "If nothing opened, copy this link into your browser:`r`n`r`n" +
+        $noteUrl + "`r`n`r`n" +
+        "(If link above is an error, try this one)`r`n" +
+        $UploadForm.Split("?")[0] + "`r`n`r`n" +
+        "Upload only the .zip files from this folder (not this text file), unchanged, then press Submit.`r`n"
+    [System.IO.File]::WriteAllText((Join-Path $script:outDir "CHECK YOUR BROWSER.txt"), $note)
+}
 try { Invoke-Item -LiteralPath $script:outDir } catch { }
 if ($UploadForm) {
     $url = $UploadForm.Replace("PLAYERNAME", [System.Uri]::EscapeDataString($top))

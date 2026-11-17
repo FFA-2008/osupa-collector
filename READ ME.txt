@@ -1,4 +1,4 @@
-osu!PA replay collector v1.4
+osu!PA replay collector v1.5
 
 WHAT IT IS
   A small script that gathers your osu! replays, plus the map files they were played on,
