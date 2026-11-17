@@ -1,0 +1,46 @@
+osu!PA - how your data is used (version 2, November 2026)
+
+Plain language, not a legal contract. If anything is unclear, just ask me
+(FFA2008, ffa2008 on Discord).
+
+1. WHAT IS COLLECTED
+   - your osu!standard replays (they contain your osu! name, play dates, cursor and key data)
+   - the .osu map files those replays were played on
+   - your setup info: your answers to the Collector's questions
+   Nothing else. No passwords, account data, skins, settings or other files.
+
+2. WHAT IT IS FOR
+   Training the osu!PA engine: it learns from real replays which parts of maps are hard,
+   for whom, and why, to help players improve. osu!PA (free, non-commercial) is the first
+   project that uses this engine. The engine may be used for similar projects later.
+
+3. HOW IT GETS TO ME
+   You upload the zip files through a Google Form, which needs a Google account. They land
+   in my private Google Drive, get moved to my own PC right away, and are then deleted from
+   Google Drive. The form shows me the Google account name you upload with.
+
+4. WHO SEES IT
+   Only me. Your files are never sold, never shared with anyone, never published and never
+   sent to an AI. AI only helps me write the code that analyses the files; the analysis
+   itself runs on my own PC.
+
+5. WHAT GETS SHOWN PUBLICLY
+   At most numbers that don't identify you (for example "players around rank 10k").
+   Anything that names you only with your own OK first.
+
+6. KEEPING AND DELETING
+   Your files are kept privately on my own drives for as long as the engine is being
+   developed. That can be longer than osu!PA itself, because the engine is meant for more
+   than one project.
+   Message me (Discord or osu!, ffa2008) any time and all your files get deleted from my
+   drives right away, no questions asked. An engine version that was already trained on
+   your files keeps what it learned from them, but the next version is trained without them.
+
+7. VOLUNTARY
+   Sending is your choice. I never pressure anyone to do anything.
+
+8. NOT OFFICIAL
+   osu!PA is a fan project and is not made by or connected to ppy / osu!.
+   It only reads files on your own computer; it does not use the osu! website or API.
+   (If peppy is reading this: HI PEPPY!!! I can prove I'm not using your API or the osu!
+   website if you want me to, just write to me on Discord or Gmail.)

@@ -1,0 +1,34 @@
+osu!PA replay collector v1.4
+
+WHAT IT IS
+  A small script that gathers your osu! replays, plus the map files they were played on,
+  into zip files you can send for the osu!PA project.
+
+WHAT IT TAKES
+  - your osu!standard replays from osu! lazer and/or osu! stable
+  - the .osu files of the maps you have replays on (small text files, no audio, no backgrounds)
+  - your answers to the 6 short setup questions it asks (all optional), including your
+    screen resolution and refresh rate
+  Nothing else: no skins, settings, collections, account data or passwords.
+  It only READS your osu! folders and never changes, moves or deletes anything in them.
+
+HOW TO USE
+  1. Unzip this folder somewhere (for example your Desktop). Don't run it from inside the zip.
+  2. Double-click osupa_collect.bat.
+     It first shows how your data is used (full text in DATA USE.txt) and asks you to agree.
+     It asks if you play lazer, stable or both: type 1, 2 or 3 respectively and press Enter.
+     Then 6 short questions about your setup; press Enter to skip any of them.
+     If Windows says "Windows protected your PC", click "More info", then "Run anyway".
+  3. Wait until it says DONE. Big libraries can take a while (it shows progress).
+  4. A folder called osupa_upload_<date> opens, and the upload page opens in your browser
+     with your osu! name already filled in (sign in with Google). Upload ALL the zip files
+     from that folder, unchanged (don't unzip or rename them), then press Submit.
+     If the page doesn't open, use this link:
+       https://docs.google.com/forms/d/e/1FAIpQLSdU7paxKc_2gHt0Nfzv9ODscI2shLW522_G8yPj8fWj23Pv1Q/viewform
+     No Google account? Send the zip files to FFA2008 (discord is ffa2008) any other way,
+     for example a download link (Dropbox, Google drive, etc.).
+  5. Once the page says your answer was recorded, you can delete that folder.
+
+WANT TO CHECK IT FIRST?
+  Right-click osupa_collect.ps1 > Open with > Notepad. Everything it does is written there,
+  with comments. osupa_collect.bat only starts it.
